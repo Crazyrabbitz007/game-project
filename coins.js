@@ -4,4 +4,8 @@ class Coin {
     this.x = random(w);
     this.y = 0 - this.r;
   }
+
+  move(){
+    this.y++;
+  }
 }
