@@ -20,6 +20,7 @@ function setup() {
 }
 
 function draw() {
+
   switch (state) {
     case 'title':
       title();
