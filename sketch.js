@@ -1,6 +1,6 @@
 'use strict';
 
-let state = 'title';
+let state = 'Title';
 let cnv;
 let points = 0;
 let w = 600; //Width
@@ -10,11 +10,8 @@ let coins = [];
 
 function setup() {
   cnv = createCanvas(w, h);
-
   textFont('monospace');
-
   player = new Player();
-
   // coins[0] = new Coin();
   coins.push(new Coin());
 }
@@ -22,7 +19,7 @@ function setup() {
 function draw() {
 
   switch (state) {
-    case 'title':
+    case 'Title':
       title();
       cnv.mouseClicked(titleMouseClicked);
       break;
@@ -72,27 +69,27 @@ function titleMouseClicked() {
 function level1() {
   background(50, 150, 200);
 
-  if (random(1)) <= 0.01); {
+  if (random(1)) += 0.01; {
 
-}
+  }
 
-player.display();
-player.move();
+  player.display();
+  player.move();
 
 
 
-for (let i = 0; i < coins.lenth; i++) {
-  coins[i].display();
-  coins[i].move();
-}
+  for (let i = 0; i < coins.lenth; i++) {
+    coins[i].display();
+    coins[i].move();
+  }
 
-// check for collion, if there is a collision increase points by 1
-if (dist(player.x, player.y, coins[0].x, coins[0].y) <= (player.r + coins[0].r) / 2) {
-  points++;
-  console.log(points);
-}
+  // check for collion, if there is a collision increase points by 1
+  if (dist(player.x, player.y, coins[0].x, coins[0].y) <= (player.r + coins[0].r) / 2) {
+    points++;
+    console.log(points);
+  }
 
-text(`Points: ${points}`, w * 0.25, h - 30);
+  text(`Points: ${points}`, w * 0.25, h - 30);
 
 }
 
